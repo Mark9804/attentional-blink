@@ -1,0 +1,62 @@
+{
+  "name": "attentional-blink",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build && cp ./dist/index.html ./dist/404.html",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,vue}": [
+      "prettier --config .prettierrc.json --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --config .prettierrc.json --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@csstools/css-parser-algorithms": "^2.3.1",
+    "@csstools/css-tokenizer": "^2.2.0",
+    "@trivago/prettier-plugin-sort-imports": "4.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "@vueuse/core": "^10.4.1",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-sort-exports": "0.8.0",
+    "eslint-plugin-vue": "9.14.1",
+    "husky": "^8.0.3",
+    "lodash-es": "^4.17.21",
+    "mitt": "^3.0.1",
+    "pinia": "^2.1.6",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "postcss-preset-env": "^8.5.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.67.0",
+    "terser": "^5.20.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vue-tsc": "^1.8.13",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.51.2",
+    "@nirtamir2/prettier-plugin-css-order": "^0.0.1",
+    "@types/lodash-es": "^4.17.9",
+    "@types/node": "^20.6.3",
+    "autoprefixer": "^10.4.15",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "postcss": "^8.4.30",
+    "tailwindcss": "^3.3.3"
+  }
+}
