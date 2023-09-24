@@ -8,12 +8,34 @@ const downloadButtonClicked = ref(false);
 const useStore = useAttentionalBlinkStore();
 
 const result = computed(() => useStore.getExperimentResult);
+const maximumLetterStreamLength = computed(
+  () => useStore.getMaximumLetterStreamLength * 2
+);
+const sheetTitles = [
+  'letterStreamCode',
+  'firstTarget',
+  'firstTargetPosition',
+  'secondTargetPosition',
+  'session',
+  'experimentType',
+  'firstTargetResponse',
+  'firstTargetCorrect',
+  'secondTargetResponse',
+  'secondTargetCorrect',
+];
+const sheetTitleLength = sheetTitles.map(title => {
+  return { wch: title.length };
+});
 
 function handleDownloadResult() {
   downloadButtonClicked.value = true;
   const sheet = utils.json_to_sheet(result.value, {
     sheetStubs: true,
   });
+  sheet['!cols'] = [
+    { wch: maximumLetterStreamLength.value },
+    ...sheetTitleLength,
+  ];
   const workbook = utils.book_new();
   utils.book_append_sheet(workbook, sheet, '実験結果');
   writeFileXLSX(workbook, '実験結果.xlsx');

@@ -22,6 +22,8 @@ export const useAttentionalBlinkStore = defineStore({
         i => 'NA' !== i.secondTargetPosition
       ),
     getExperimentResult: state => state.sessionsList,
+    getMaximumLetterStreamLength: state =>
+      Math.max(...state.sessionsList.map(e => e.letterStream.length)),
   },
   actions: {
     setSessionsList(sessionsList: ExperimentSession[]): void {
