@@ -31,3 +31,16 @@ p {
   color: #165dff;
 }
 
+.button-space {
+  padding: 0 5px;
+  display: inline-block;
+  color: var(--color-neutral-10);
+  font-size: 22px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  vertical-align: 0.125em;
+  background-color: var(--color-neutral-4);
+  border: solid 1px var(--color-neutral-4);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

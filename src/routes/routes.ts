@@ -10,6 +10,10 @@ const routes: RouteRecordRaw[] = [
     redirect: '/briefing',
   },
   {
+    path: '/start',
+    redirect: '/briefing',
+  },
+  {
     path: '/briefing',
     name: 'OverallExperimentBriefing',
     component: OverallExperimentBriefing,

@@ -83,7 +83,7 @@ eventBus.on('spaceKeyReleased', () => {
         かどうかを判断してください
       </p>
       <p>
-        準備ができたら Space キーを１秒以上に押して<br />
+        準備ができたら <span class="button-space">Space</span> キーを１秒以上に押して<br />
         実験を始めてください
       </p>
     </a-space>
