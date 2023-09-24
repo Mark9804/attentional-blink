@@ -29,7 +29,7 @@ function handleExperimentTypeSelect(experimentType: ExperimentType) {
     return session;
   });
   useStore.setSessionsList(experimentSessionList);
-  router.push({
+  router.replace({
     name: 'ExperimentInstruction',
     query: {
       nextSession: 1,

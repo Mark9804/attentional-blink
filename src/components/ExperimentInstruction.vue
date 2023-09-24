@@ -45,7 +45,7 @@ eventBus.on('spaceKeyReleased', () => {
     spaceKeyLongPressed.value = false;
     eventBus.off('spaceKeyPressed');
     eventBus.off('spaceKeyReleased');
-    router.push({
+    router.replace({
       name: 'ExperimentComponent',
       params: {
         session: nextSession,

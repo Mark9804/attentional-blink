@@ -94,7 +94,7 @@ function handleSecondTargetResponse(response: boolean) {
     'secondTargetCorrect',
     isSecondTargetCorrect
   );
-  router.push({
+  router.replace({
     name: hasNextSession.value ? 'ExperimentInstruction' : 'ExperimentEnd',
     query: {
       nextSession: session.value + 1,

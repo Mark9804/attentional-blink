@@ -7,7 +7,7 @@ const router = useRouter();
 eventBus.on('spaceKeyPressed', () => {
   eventBus.off('spaceKeyPressed');
   setTimeout(() => {
-    router.push({
+    router.replace({
       name: 'OverallExperimentBriefing',
     });
   }, 4);
